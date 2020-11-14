@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Solar System</string>
+    <string name="earth">Our home planet has a dense metal core,\na thick viscous rock mantle,\nand a thin crust.
+                            \nIt's unique in the solar system for having humans and liquid water on its surface.</string>
+</resources>
