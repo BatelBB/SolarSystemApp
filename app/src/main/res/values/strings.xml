@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">Solar System</string>
     <string name="earth">Our home planet has a dense metal core,\na thick viscous rock mantle,\nand a thin crust.
-                            \nIt's unique in the solar system for having humans and liquid water on its surface.</string>
+                            \nIt\'s unique in the solar system for having humans\nand liquid water on its surface.</string>
+    <string name="moon">At 3470 km in diameter, the Moon has the\nlongest moon-to-planet ratio.
+        It\'s thought to\nhave formed when a small planet impacted\nEarth at a
+        grazing angle billions of years\nago. It\'s heavily crated, and has huge\nflood plains on it called mania.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
