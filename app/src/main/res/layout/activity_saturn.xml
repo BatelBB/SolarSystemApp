@@ -9,17 +9,23 @@
     android:orientation="vertical"
     tools:context=".Earth">
 
+    <ImageView
+        android:id="@+id/saturn_button"
+        android:layout_width="181dp"
+        android:layout_height="190dp"
+        android:src="@drawable/Saturn" />
+
 
     <ImageView
-        android:id="@+id/jupiter_button"
-        android:layout_width="399dp"
-        android:layout_height="344dp"
-        android:src="@drawable/jupiter_rotating" />
-
-    <ImageView
-        android:id="@+id/europa_button"
+        android:id="@+id/titan_button"
         android:layout_width="93dp"
         android:layout_height="51dp"
-        android:src="@drawable/Europa" />
+        android:src="@drawable/titan" />
+
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

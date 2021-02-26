@@ -11,15 +11,22 @@
 
 
     <ImageView
-        android:id="@+id/jupiter_button"
-        android:layout_width="399dp"
-        android:layout_height="344dp"
-        android:src="@drawable/jupiter_rotating" />
+        android:id="@+id/uranus_button"
+        android:layout_width="181dp"
+        android:layout_height="190dp"
+        android:src="@drawable/uranus" />
+
 
     <ImageView
-        android:id="@+id/europa_button"
+        android:id="@+id/titania_button"
         android:layout_width="93dp"
         android:layout_height="51dp"
-        android:src="@drawable/Europa" />
+        android:src="@drawable/titania" />
+
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

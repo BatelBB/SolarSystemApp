@@ -10,28 +10,19 @@
     tools:context=".Earth">
 
 
+        <ImageView
+            android:id="@+id/earth_button"
+            android:layout_width="181dp"
+            android:layout_height="190dp"
+            android:src="@drawable/earth_rotation2" />
 
-    <!--    <pl.droidsonroids.gif.GifImageButton-->
-    <!--        android:id="@+id/earth_button"-->
-    <!--        android:layout_width="181dp"-->
-    <!--        android:layout_height="190dp"-->
-    <!--        android:src="@drawable/earth_rotation2" />-->
-    <Button
-        android:id="@+id/earth_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="EARTH"/>
 
-    <!--    <pl.droidsonroids.gif.GifImageButton-->
-    <!--        android:id="@+id/moon_button"-->
-    <!--        android:layout_width="93dp"-->
-    <!--        android:layout_height="51dp"-->
-    <!--        android:src="@drawable/small_moon_button" />-->
-    <Button
-        android:id="@+id/moon_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="MOON"/>
+        <ImageView
+            android:id="@+id/moon_button"
+            android:layout_width="93dp"
+            android:layout_height="51dp"
+            android:src="@drawable/small_moon_button" />
+
 
     <FrameLayout
         android:id="@+id/fragment_container"
