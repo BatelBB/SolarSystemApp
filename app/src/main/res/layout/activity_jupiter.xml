@@ -7,7 +7,7 @@
     android:background="@drawable/stars_wallpaper3"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".Earth">
 
 
     <TextView
