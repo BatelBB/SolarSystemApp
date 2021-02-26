@@ -5,6 +5,19 @@
     <string name="moon">At 3470 km in diameter, the Moon has the\nlongest moon-to-planet ratio.
         It\'s thought to\nhave formed when a small planet impacted\nEarth at a
         grazing angle billions of years\nago. It\'s heavily crated, and has huge\nflood plains on it called mania.</string>
+    <string name="jupiter">A gas giant, it\'s the largest planet in\nour solar system. It has a dynamic\natmosphere,
+                        including belts, zones,\nand a gigantic red spot created by a\npersistent hurricane. Its interior
+                        is mostly\nmetallic hydrogen, and it has the fastest spin of all planets.</string>
+    <string name="mercury">Orbiting the sun in just 89 days, it also has\nthe most elliptical orbit of any planet.
+                        \nIt spins very slowly, once every 2/3\nof its orbital period. Despite its\n
+                        surface reaching a blistering 430C,\nit still has water ice in permanently\nshadowed crates
+                        near its poles\nwhere the temperature stays below -170C</string>
+    <string name="sun">Our star is 2 octillion tons of hot hydrogen gas\nemitting 400 septillion of energy every
+                        \nsecond. The hottest part of the sun is its 15\nmillion C core, when it\'s
+                        been fusing hydrogen into helium for the past 4.6 billion years.\nDespite that
+                        it\'s only midlife aged!</string>
+    <string name="mars"></string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
