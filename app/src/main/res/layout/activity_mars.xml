@@ -26,7 +26,7 @@
         android:id="@+id/moon_button1"
         android:layout_width="93dp"
         android:layout_height="51dp"
-        android:src="@drawable/Diemos" />
+        android:src="@drawable/ddiemos" />
     <ImageView
         android:id="@+id/moon_button2"
         android:layout_width="93dp"
