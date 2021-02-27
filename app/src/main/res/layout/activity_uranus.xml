@@ -12,9 +12,9 @@
 
     <ImageView
         android:id="@+id/uranus_button"
-        android:layout_width="181dp"
-        android:layout_height="190dp"
-        android:src="@drawable/uranus" />
+        android:layout_width="389dp"
+        android:layout_height="377dp"
+        android:src="@drawable/uranus2" />
 
 
     <ImageView

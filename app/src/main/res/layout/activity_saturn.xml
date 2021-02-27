@@ -11,15 +11,15 @@
 
     <ImageView
         android:id="@+id/saturn_button"
-        android:layout_width="181dp"
-        android:layout_height="190dp"
-        android:src="@drawable/ssaturn" />
+        android:layout_width="411dp"
+        android:layout_height="379dp"
+        android:src="@drawable/ssaturn2" />
 
 
     <ImageView
         android:id="@+id/titan_button"
-        android:layout_width="93dp"
-        android:layout_height="51dp"
+        android:layout_width="119dp"
+        android:layout_height="70dp"
         android:src="@drawable/titan" />
 
 

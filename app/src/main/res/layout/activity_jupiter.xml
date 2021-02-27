@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,12 +14,31 @@
         android:id="@+id/jupiter_button"
         android:layout_width="399dp"
         android:layout_height="344dp"
-        android:src="@drawable/jupiter_rotating" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="193dp"
+        android:src="@drawable/jupiter" />
 
     <ImageView
         android:id="@+id/europa_button"
         android:layout_width="93dp"
         android:layout_height="51dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="122dp"
         android:src="@drawable/eeuropa" />
 
-</LinearLayout>
+    <FrameLayout
+        android:id="@+id/jupiter_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="28dp" />
+
+</RelativeLayout>

@@ -12,9 +12,9 @@
 
     <ImageView
         android:id="@+id/neptune_button"
-        android:layout_width="181dp"
-        android:layout_height="190dp"
-        android:src="@drawable/neptune" />
+        android:layout_width="396dp"
+        android:layout_height="305dp"
+        android:src="@drawable/neptune2" />
 
 
     <ImageView

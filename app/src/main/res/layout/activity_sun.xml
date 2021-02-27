@@ -12,9 +12,9 @@
 
     <ImageView
         android:id="@+id/sun_button"
-        android:layout_width="350dp"
-        android:layout_height="274dp"
-        android:src="@drawable/sun" />
+        android:layout_width="443dp"
+        android:layout_height="443dp"
+        android:src="@drawable/sun2" />
 
 
 

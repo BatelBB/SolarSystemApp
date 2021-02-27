@@ -11,9 +11,9 @@
 
     <ImageView
         android:id="@+id/venus_button"
-        android:layout_width="181dp"
-        android:layout_height="190dp"
-        android:src="@drawable/venus" />
+        android:layout_width="314dp"
+        android:layout_height="288dp"
+        android:src="@drawable/venus2" />
 
 
     <FrameLayout
