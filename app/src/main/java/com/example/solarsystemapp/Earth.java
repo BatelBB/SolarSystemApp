@@ -4,14 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.r0adkll.slidr.Slidr;
+import com.r0adkll.slidr.model.SlidrConfig;
+import com.r0adkll.slidr.model.SlidrPosition;
 
 import org.w3c.dom.Text;
 
@@ -20,13 +26,16 @@ import org.w3c.dom.Text;
 public class Earth extends _SwipeActivityClass {
 
     private FrameLayout mFragmentContainer;
-    private Text mEarthText;
     private ImageView mEarthView;
     private ImageView mMoonView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //next three lines are for setting full screen
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
 
@@ -51,6 +60,7 @@ public class Earth extends _SwipeActivityClass {
                 openFragment(moonString, R.string.moon);
             }
         });
+
     }
 
     @Override
@@ -79,10 +89,12 @@ public class Earth extends _SwipeActivityClass {
     public void openMars(){
         Intent intent = new Intent(this, Mars.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.push_left_in,R.anim.push_left_out);
     }
     public void openVenus(){
         Intent intent = new Intent(this, Venus.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.push_right_out,R.anim.push_right_in);
     }
 
 }
