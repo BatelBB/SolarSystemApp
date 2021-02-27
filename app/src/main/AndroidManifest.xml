@@ -11,12 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="._SwipeActivityClass"></activity>
+        <activity
+            android:name="._SwipeActivityClass"
+            android:theme="@style/AppTheme.SlidrActivityTheme" />
         <activity
             android:name=".Sun"
-            android:theme="@style/AppTheme.SlidrActivityTheme">
-
-        </activity>
+            android:theme="@style/AppTheme.SlidrActivityTheme"></activity>
         <activity
             android:name=".Pluto"
             android:theme="@style/AppTheme.SlidrActivityTheme" />
@@ -41,7 +41,9 @@
         <activity
             android:name=".Jupiter"
             android:theme="@style/AppTheme.SlidrActivityTheme" />
-        <activity android:name=".Earth">
+        <activity
+            android:name=".Earth"
+            android:theme="@style/AppTheme.SlidrActivityTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
