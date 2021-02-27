@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,9 +15,9 @@ import com.bumptech.glide.Glide;
 
 import org.w3c.dom.Text;
 
-import pl.droidsonroids.gif.GifImageButton;
 
-public class Earth extends AppCompatActivity {
+
+public class Earth extends _SwipeActivityClass {
 
     private FrameLayout mFragmentContainer;
     private Text mEarthText;
@@ -27,7 +28,6 @@ public class Earth extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
 
         mFragmentContainer = (FrameLayout) findViewById(R.id.fragment_container);
@@ -53,6 +53,16 @@ public class Earth extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onSwipeRight() {
+        openVenus();
+    }
+
+    @Override
+    protected void onSwipeLeft() {
+        openMars();
+    }
+
     public void openFragment(String text, int ID) {
         EarthFragment fragment = EarthFragment.newInstance(text);
         addText(ID, fragment);
@@ -66,6 +76,13 @@ public class Earth extends AppCompatActivity {
     public void addText(int ID, EarthFragment fragment) {
         fragment.setmTextView(ID);
     }
-
+    public void openMars(){
+        Intent intent = new Intent(this, Mars.class);
+        startActivity(intent);
+    }
+    public void openVenus(){
+        Intent intent = new Intent(this, Venus.class);
+        startActivity(intent);
+    }
 
 }

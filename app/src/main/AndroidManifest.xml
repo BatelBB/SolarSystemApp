@@ -4,36 +4,43 @@
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
-    <uses-feature android:name="android.hardware.type.watch" />
-
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Sun"></activity>
-        <activity android:name=".Pluto" />
-        <activity android:name=".Neptune" />
-        <activity android:name=".Uranus" />
-        <activity android:name=".Saturn" />
-        <activity android:name=".Venus" />
-        <activity android:name=".Mercury" />
-        <activity android:name=".Mars" />
+        <activity android:name="._SwipeActivityClass"></activity>
+        <activity
+            android:name=".Sun"
+            android:theme="@style/AppTheme.SlidrActivityTheme">
 
-        <uses-library
-            android:name="com.google.android.wearable"
-            android:required="true" />
-        <!--
-               Set to true if your app is Standalone, that is, it does not require the handheld
-               app to run.
-        -->
-        <meta-data
-            android:name="com.google.android.wearable.standalone"
-            android:value="true" />
-
-        <activity android:name=".Jupiter" />
+        </activity>
+        <activity
+            android:name=".Pluto"
+            android:theme="@style/AppTheme.SlidrActivityTheme" />
+        <activity
+            android:name=".Neptune"
+            android:theme="@style/AppTheme.SlidrActivityTheme" />
+        <activity
+            android:name=".Uranus"
+            android:theme="@style/AppTheme.SlidrActivityTheme" />
+        <activity
+            android:name=".Saturn"
+            android:theme="@style/AppTheme.SlidrActivityTheme" />
+        <activity
+            android:name=".Venus"
+            android:theme="@style/AppTheme.SlidrActivityTheme" />
+        <activity
+            android:name=".Mercury"
+            android:theme="@style/AppTheme.SlidrActivityTheme" />
+        <activity
+            android:name=".Mars"
+            android:theme="@style/AppTheme.SlidrActivityTheme" />
+        <activity
+            android:name=".Jupiter"
+            android:theme="@style/AppTheme.SlidrActivityTheme" />
         <activity android:name=".Earth">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
