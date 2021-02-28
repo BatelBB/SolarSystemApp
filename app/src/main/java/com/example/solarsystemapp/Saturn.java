@@ -39,7 +39,7 @@ public class Saturn extends _SwipeActivityClass {
         mFragmentContainer = (FrameLayout) findViewById(R.id.saturn_fragment_container);
 
         mSaturnView = (ImageView) findViewById(R.id.saturn_button);
-        Glide.with(this).asGif().load(R.drawable.ssaturn2).into(mSaturnView);//library to use the gif
+        Glide.with(this).asGif().load(R.drawable.ssaturn3).into(mSaturnView);//library to use the gif
         mSaturnView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

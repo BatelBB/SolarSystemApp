@@ -46,7 +46,7 @@ public class Earth extends _SwipeActivityClass {
         mFragmentContainer = (FrameLayout) findViewById(R.id.fragment_container);
 
         mEarthView = (ImageView) findViewById(R.id.earth_button);
-        Glide.with(this).asGif().load(R.drawable.earth_rotation2).into(mEarthView);//library to use the gif
+        Glide.with(this).asGif().load(R.drawable.earth_rotation3).into(mEarthView);//library to use the gif
         mEarthView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,7 +60,7 @@ public class Earth extends _SwipeActivityClass {
         });
 
         mMoonView = (ImageView) findViewById(R.id.moon_button);
-        Glide.with(this).asGif().load(R.drawable.small_moon_button).into(mMoonView);//library to use the gif
+        Glide.with(this).asGif().load(R.drawable.small_moon_button6).into(mMoonView);//library to use the gif
         mMoonView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -43,7 +43,7 @@ public class Mars extends _SwipeActivityClass {
         mDiemosView = (ImageView) findViewById(R.id.diemos_button1);
         Glide.with(this).asGif().load(R.drawable.ddiemos).into(mDiemosView);//library to use the gif
         mMarsView = (ImageView) findViewById(R.id.mars_button);
-        Glide.with(this).asGif().load(R.drawable.mars_rotation).into(mMarsView);//library to use the gif
+        Glide.with(this).asGif().load(R.drawable.mars_rotation2).into(mMarsView);//library to use the gif
         mMarsView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

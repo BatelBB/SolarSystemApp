@@ -39,7 +39,7 @@ public class Pluto extends _SwipeActivityClass {
         mFragmentContainer = (FrameLayout) findViewById(R.id.pluto_fragment_container);
 
         mPlutoView = (ImageView) findViewById(R.id.pluto_button);
-        Glide.with(this).asGif().load(R.drawable.pluto).into(mPlutoView);//library to use the gif
+        Glide.with(this).asGif().load(R.drawable.pluto2).into(mPlutoView);//library to use the gif
         mPlutoView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
