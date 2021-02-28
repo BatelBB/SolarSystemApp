@@ -57,8 +57,8 @@ public class UranusFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_earth, container, false);
-        mTextView = (TextView) view.findViewById(R.id.earth_text); //IMPORTANT to set the TextView from the xml to show the text that set in the next line
+        View view = inflater.inflate(R.layout.fragment_uranus, container, false);
+        mTextView = (TextView) view.findViewById(R.id.uranus_text); //IMPORTANT to set the TextView from the xml to show the text that set in the next line
         mTextView.setText(mID); // set the text to textView with the (int) id of the string text
         return view;
     }

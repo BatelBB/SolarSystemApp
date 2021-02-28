@@ -21,8 +21,14 @@ public class Jupiter extends _SwipeActivityClass {
 
     private FrameLayout mFragmentContainer;
 
-    ImageView mJupiterView;
-    ImageView mEuropaView;
+    private boolean isOpen = false;
+
+    private JupiterFragment fragment;
+    private FragmentManager fragmentManager;
+    private FragmentTransaction transaction;
+
+    private ImageView mJupiterView;
+    private ImageView mEuropaView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +45,12 @@ public class Jupiter extends _SwipeActivityClass {
         mJupiterView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String jupiterString = getResources().getString(R.string.jupiter); //gets the string from the strings.xml
-                openFragment(jupiterString, R.string.jupiter);
+                if(!isOpen) {
+                    String jupiterString = getResources().getString(R.string.jupiter); //gets the string from the strings.xml
+                    openFragment(jupiterString, R.string.jupiter);
+                }else{
+                    closeFragment();
+                }
             }
         });
 
@@ -49,24 +59,36 @@ public class Jupiter extends _SwipeActivityClass {
         mEuropaView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String europaString = getResources().getString(R.string.europa); //gets the string from the strings.xml
-                openFragment(europaString, R.string.europa);
+                if(!isOpen) {
+                    String europaString = getResources().getString(R.string.europa); //gets the string from the strings.xml
+                    openFragment(europaString, R.string.europa);
+                }else{
+                    closeFragment();
+                }
             }
         });
 
     }
 
-    public void openFragment(String text, int ID) {
-        JupiterFragment fragment = JupiterFragment.newInstance(text);
+    private void openFragment(String text, int ID) {
+        isOpen = true;
+        fragment = JupiterFragment.newInstance(text);
         addText(ID, fragment);
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        fragmentManager = getSupportFragmentManager();
+        transaction = fragmentManager.beginTransaction();
         transaction.setCustomAnimations(R.anim.earth_from_bottom, R.anim.earth_to_bottom);//in order to add a button or something than add both again
         transaction.addToBackStack(null);//in order to close only the fragment and not the whole activity
         transaction.add(R.id.jupiter_fragment_container, fragment, "fragment_jupiter").commit();
     }
 
-    public void addText(int ID, JupiterFragment fragment) {
+    private void closeFragment() {
+        isOpen = false;
+        transaction = fragmentManager.beginTransaction();
+        transaction.setCustomAnimations(R.anim.earth_to_bottom, R.anim.earth_from_bottom);
+        transaction.remove(fragment).commit();
+    }
+
+    private void addText(int ID, JupiterFragment fragment) {
         fragment.setmTextView(ID);
     }
 
@@ -80,13 +102,13 @@ public class Jupiter extends _SwipeActivityClass {
         openSaturn();
     }
 
-    public void openMars(){
+    private void openMars(){
         Intent intent = new Intent(this, Mars.class);
         startActivity(intent);
         overridePendingTransition(R.anim.push_right_out,R.anim.push_right_in);
     }
 
-    public void openSaturn(){
+    private void openSaturn(){
         Intent intent = new Intent(this, Saturn.class);
         startActivity(intent);
         overridePendingTransition(R.anim.push_left_in,R.anim.push_left_out);

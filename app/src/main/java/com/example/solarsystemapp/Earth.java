@@ -22,12 +22,17 @@ import com.r0adkll.slidr.model.SlidrPosition;
 import org.w3c.dom.Text;
 
 
-
 public class Earth extends _SwipeActivityClass {
 
-    private FrameLayout mFragmentContainer;
     private ImageView mEarthView;
     private ImageView mMoonView;
+
+    private boolean isOpen = false;
+    private FrameLayout mFragmentContainer;
+    private EarthFragment fragment;
+    private FragmentManager fragmentManager;
+    private FragmentTransaction transaction;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +43,6 @@ public class Earth extends _SwipeActivityClass {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
-
         mFragmentContainer = (FrameLayout) findViewById(R.id.fragment_container);
 
         mEarthView = (ImageView) findViewById(R.id.earth_button);
@@ -46,8 +50,12 @@ public class Earth extends _SwipeActivityClass {
         mEarthView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String earthString = getResources().getString(R.string.earth); //gets the string from the strings.xml
-                openFragment(earthString, R.string.earth);
+                if (!isOpen) {
+                    String earthString = getResources().getString(R.string.earth); //gets the string from the strings.xml
+                    openFragment(earthString, R.string.earth);
+                } else {
+                    closeFragment();
+                }
             }
         });
 
@@ -56,8 +64,12 @@ public class Earth extends _SwipeActivityClass {
         mMoonView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String moonString = getResources().getString(R.string.moon);
-                openFragment(moonString, R.string.moon);
+                if (!isOpen) {
+                    String moonString = getResources().getString(R.string.moon);
+                    openFragment(moonString, R.string.moon);
+                }else{
+                    closeFragment();
+                }
             }
         });
 
@@ -73,28 +85,38 @@ public class Earth extends _SwipeActivityClass {
         openMars();
     }
 
-    public void openFragment(String text, int ID) {
-        EarthFragment fragment = EarthFragment.newInstance(text);
+    private void openFragment(String text, int ID) {
+        isOpen = true;
+        fragment = EarthFragment.newInstance(text);
         addText(ID, fragment);
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        fragmentManager = getSupportFragmentManager();
+        transaction = fragmentManager.beginTransaction();
         transaction.setCustomAnimations(R.anim.earth_from_bottom, R.anim.earth_to_bottom);//in order to add a button or something than add both again
         transaction.addToBackStack(null);//in order to close only the fragment and not the whole activity
         transaction.add(R.id.fragment_container, fragment, "fragment_earth").commit();
     }
 
-    public void addText(int ID, EarthFragment fragment) {
+    private void closeFragment() {
+        isOpen = false;
+        transaction = fragmentManager.beginTransaction();
+        transaction.setCustomAnimations(R.anim.earth_to_bottom, R.anim.earth_from_bottom);
+        transaction.remove(fragment).commit();
+    }
+
+    private void addText(int ID, EarthFragment fragment) {
         fragment.setmTextView(ID);
     }
-    public void openMars(){
+
+    private void openMars() {
         Intent intent = new Intent(this, Mars.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.push_left_in,R.anim.push_left_out);
+        overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
     }
-    public void openVenus(){
+
+    private void openVenus() {
         Intent intent = new Intent(this, Venus.class);
         startActivity(intent);
-        overridePendingTransition(R.anim.push_right_out,R.anim.push_right_in);
+        overridePendingTransition(R.anim.push_right_out, R.anim.push_right_in);
     }
 
 }
