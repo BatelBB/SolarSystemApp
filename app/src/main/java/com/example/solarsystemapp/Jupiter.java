@@ -6,11 +6,16 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.r0adkll.slidr.Slidr;
@@ -38,6 +43,8 @@ public class Jupiter extends _SwipeActivityClass {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_jupiter);
 
+        showToast();
+
         mFragmentContainer = (FrameLayout) findViewById(R.id.jupiter_fragment_container);
 
         mJupiterView = (ImageView) findViewById(R.id.jupiter_button);
@@ -55,7 +62,7 @@ public class Jupiter extends _SwipeActivityClass {
         });
 
         mEuropaView = (ImageView) findViewById(R.id.europa_button);
-        Glide.with(this).asGif().load(R.drawable.eeuropa).into(mEuropaView);//library to use the gif
+        Glide.with(this).asGif().load(R.drawable.eeuropa2).into(mEuropaView);//library to use the gif
         mEuropaView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,5 +119,20 @@ public class Jupiter extends _SwipeActivityClass {
         Intent intent = new Intent(this, Saturn.class);
         startActivity(intent);
         overridePendingTransition(R.anim.push_left_in,R.anim.push_left_out);
+    }
+
+    private void showToast(){
+        LayoutInflater inflater = getLayoutInflater();
+        View layout = inflater.inflate(R.layout.custom_toast,
+                (ViewGroup) findViewById(R.id.custom_toast_container));
+
+        TextView text = (TextView) layout.findViewById(R.id.text);
+        text.setText("Jupiter");
+
+        Toast toast = new Toast(getApplicationContext());
+        toast.setGravity(Gravity.BOTTOM, 0, 50);
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setView(layout);
+        toast.show();
     }
 }
