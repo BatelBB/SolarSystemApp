@@ -19,7 +19,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="103dp"
         android:layout_marginTop="223dp"
-        android:src="@drawable/mars_rotation" />
+        android:src="@drawable/mars_rotation2" />
 
     <ImageView
         android:id="@+id/phobos_button2"

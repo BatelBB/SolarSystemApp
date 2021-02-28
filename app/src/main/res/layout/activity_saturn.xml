@@ -13,7 +13,7 @@
         android:id="@+id/saturn_button"
         android:layout_width="411dp"
         android:layout_height="379dp"
-        android:src="@drawable/ssaturn2" />
+        android:src="@drawable/ssaturn3" />
 
 
     <ImageView

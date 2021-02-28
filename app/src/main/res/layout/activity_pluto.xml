@@ -12,9 +12,9 @@
 
     <ImageView
         android:id="@+id/pluto_button"
-        android:layout_width="140dp"
-        android:layout_height="148dp"
-        android:src="@drawable/pluto" />
+        android:layout_width="170dp"
+        android:layout_height="160dp"
+        android:src="@drawable/pluto2" />
 
 
     <FrameLayout
